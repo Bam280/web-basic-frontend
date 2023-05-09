@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+ 
+  display: flex;
+  flex-direction: column;
+}
+ 
+header.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 1rem;
+  z-index: 999;
+}
+
+header.navbar-container .logo img {
+  width: 150px;
+}
+ 
+ 
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+ 
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+ 
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: .5rem 1.5rem;
+  border-radius: 999px;
+  transition: all .2s ease-in-out;
+}
+ 
+header.navbar-container .nav-list li:hover a {
+  background-color: #3C6255;
+  color: white;
+}
+ 
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+}
+
+#pasFoto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #EAE7B1;
+  box-shadow: 0 0 0 5px #A6BB8D;
+}
+ 
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-right: 250px;
+  flex-flow: column nowrap;
+  gap: 3rem;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+ 
+main .content .content-description {
+  flex: 1 1;
+  padding-bottom: 100px;
+}
+ 
+main .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+ 
+main .content .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+ 
+main .content .content-description button {
+  padding: .8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #3C6255;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+ 
+main .content .content-description button:hover {
+  border: 3px solid #3C6255;
+  color: #3C6255;
+  background-color: transparent;
+}
+
+main .content .content-menu {
+  flex: 1 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  
+}
+
+main .content .content-menu .card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 45px;
+  padding: 20px;
+  background-color: #EAE7B1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+main .content .content-menu .card img {
+  width: 200px;
+  border-radius: 25px;
+}
+ 
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  padding: 20px;
+}
+ 
+main aside .bio-data {
+  height: 100%;
+  display: flex;
+}
+ 
+main aside .bio-data ul {
+  width: 250px;
+  padding: 35px;
+  margin: auto;
+  border-radius: 12px;
+  background-color: #3C6255;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+ 
+main aside .bio-data li {
+  list-style-type: none;
+  color: white;
+  text-align: center;
+}
+ 
+main aside .bio-data li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all .1s ease-in-out;
+}
+ 
+main aside .bio-data li a:hover {
+  color: #89b0d9;
+}
+
+.burger button {
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+	margin: 5px;
+}
+
+footer {
+  background-color: #3C6255;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+ 
+/* Medium devices (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+ 
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: .5rem;
+  }
+ 
+  main {
+    padding: 1rem 3rem;
+  }
+
+  main aside .bio-data ul{
+    display: none;
+  }
+
+  .burger {
+    display: inline;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin-bottom: 100px;
+    background-color: #3C6255;
+    background-image: purl("https://www.flaticon.com/svg/vstatic/svg/3917/3917789.svg?token=exp=1678112190~hmac=a126495809b80b81dbdc3aeb8beb67b6");
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+
+  .burger div {
+		transition: all 0.3s ease;
+	}
+
+  main aside.active .bio-data ul {
+    padding: 35px;
+    margin: auto;
+    border-radius: 12px;
+    background-color: #3C6255;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+ 
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 0;
+	padding-top: 0;
+  }
+ 
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+ 
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+ 
+}
